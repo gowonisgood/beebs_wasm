@@ -1,0 +1,3 @@
+/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/wamr.dir
+/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/edit_cache.dir
+/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/rebuild_cache.dir

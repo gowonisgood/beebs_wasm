@@ -1,0 +1,421 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:206 (message)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      The target system is: Generic -  - 
+      The host system is: Linux - 5.15.0-135-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/arm-none-eabi-gcc 
+      Build flags: -DTHREAD_STACKSIZE_MAIN=(6 * 1024);-DISR_STACKSIZE=1024;-DWAMR_BUILD_MEMORY_CHECK=0;-DDEVELHELP;-DCPU_FAM_STM32L5;-DSTM32L552xx;-DCPU_LINE_STM32L552xx;-DSTM32_FLASHSIZE=524288U;-D__SYSTEM_STM32L5XX_H;-DSYSTEM_STM32L5XX_H;-mno-thumb-interwork;-mcpu=cortex-m33;-mlittle-endian;-mthumb;-mfloat-abi=hard;-mfpu=fpv5-sp-d16;-ffunction-sections;-fdata-sections;-fshort-enums;-ggdb;-g3;-Os;-DCPU_MODEL_STM32L552ZE;-DCPU_CORE_CORTEX_M33;-DRIOT_APPLICATION="wasm-example";-DBOARD_NUCLEO_L552ZE_Q="nucleo-l552ze-q";-DRIOT_BOARD=BOARD_NUCLEO_L552ZE_Q;-DCPU_STM32="stm32";-DRIOT_CPU=CPU_STM32;-std=c11;-fwrapv;-Wstrict-overflow;-fno-common;-ffunction-sections;-fdata-sections;-Wall;-Wextra;-Wmissing-include-dirs;-fno-delete-null-pointer-checks;-fdiagnostics-color;-Wstrict-prototypes;-Wold-style-definition;-gz;-Wformat=2;-Wformat-overflow;-Wformat-truncation;-fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/=;-DCPU_RAM_BASE=0x20000000;-DCPU_RAM_SIZE=0x40000;-include;/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h;-Wno-format;-Wno-strict-prototypes;-Wno-old-style-definition;-Wno-cast-function-type
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg.a(lib_a-exit.o): in function `exit':
+      /build/newlib-pB30de/newlib-3.3.0/build/arm-none-eabi/thumb/v8-m.main+fp/hard/newlib/libc/stdlib/../../../../../../../../newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/arm-none-eabi-gcc 
+      Build flags: -DTHREAD_STACKSIZE_MAIN=(6 * 1024);-DISR_STACKSIZE=1024;-DWAMR_BUILD_MEMORY_CHECK=0;-DDEVELHELP;-DCPU_FAM_STM32L5;-DSTM32L552xx;-DCPU_LINE_STM32L552xx;-DSTM32_FLASHSIZE=524288U;-D__SYSTEM_STM32L5XX_H;-DSYSTEM_STM32L5XX_H;-mno-thumb-interwork;-mcpu=cortex-m33;-mlittle-endian;-mthumb;-mfloat-abi=hard;-mfpu=fpv5-sp-d16;-ffunction-sections;-fdata-sections;-fshort-enums;-ggdb;-g3;-Os;-DCPU_MODEL_STM32L552ZE;-DCPU_CORE_CORTEX_M33;-DRIOT_APPLICATION="wasm-example";-DBOARD_NUCLEO_L552ZE_Q="nucleo-l552ze-q";-DRIOT_BOARD=BOARD_NUCLEO_L552ZE_Q;-DCPU_STM32="stm32";-DRIOT_CPU=CPU_STM32;-std=c11;-fwrapv;-Wstrict-overflow;-fno-common;-ffunction-sections;-fdata-sections;-Wall;-Wextra;-Wmissing-include-dirs;-fno-delete-null-pointer-checks;-fdiagnostics-color;-Wstrict-prototypes;-Wold-style-definition;-gz;-Wformat=2;-Wformat-overflow;-Wformat-truncation;-fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/=;-DCPU_RAM_BASE=0x20000000;-DCPU_RAM_SIZE=0x40000;-include;/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h;-Wno-format;-Wno-strict-prototypes;-Wno-old-style-definition;-Wno-cast-function-type
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/3.27.6/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+      /build/newlib-pB30de/newlib-3.3.0/build/arm-none-eabi/newlib/libc/stdlib/../../../../../newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/3.27.6/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX"
+      binary: "/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-DTHREAD_STACKSIZE_MAIN='(6 * 1024)' -DISR_STACKSIZE=1024 -DWAMR_BUILD_MEMORY_CHECK=0 -DDEVELHELP -DCPU_FAM_STM32L5 -DSTM32L552xx -DCPU_LINE_STM32L552xx -DSTM32_FLASHSIZE=524288U -D__SYSTEM_STM32L5XX_H -DSYSTEM_STM32L5XX_H -mno-thumb-interwork -mcpu=cortex-m33 -mlittle-endian -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -ffunction-sections -fdata-sections -fshort-enums -ggdb -g3 -Os -DCPU_MODEL_STM32L552ZE -DCPU_CORE_CORTEX_M33 -DRIOT_APPLICATION=\\\"wasm-example\\\" -DBOARD_NUCLEO_L552ZE_Q=\\\"nucleo-l552ze-q\\\" -DRIOT_BOARD=BOARD_NUCLEO_L552ZE_Q -DCPU_STM32=\\\"stm32\\\" -DRIOT_CPU=CPU_STM32 -std=c11 -fwrapv -Wstrict-overflow -fno-common -ffunction-sections -fdata-sections -Wall -Wextra -Wmissing-include-dirs -fno-delete-null-pointer-checks -fdiagnostics-color -Wstrict-prototypes -Wold-style-definition -gz -Wformat=2 -Wformat-overflow -Wformat-truncation -fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/= -DCPU_RAM_BASE=0x20000000 -DCPU_RAM_SIZE=0x40000 -include '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h' -Wno-format -Wno-strict-prototypes -Wno-old-style-definition -Wno-cast-function-type"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX'
+        
+        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8ba01/fast
+        gmake[2]: Entering directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8ba01.dir/build.make CMakeFiles/cmTC_8ba01.dir/build
+        gmake[3]: Entering directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX'
+        Building C object CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj
+        /usr/bin/arm-none-eabi-gcc   -DTHREAD_STACKSIZE_MAIN='(6 * 1024)' -DISR_STACKSIZE=1024 -DWAMR_BUILD_MEMORY_CHECK=0 -DDEVELHELP -DCPU_FAM_STM32L5 -DSTM32L552xx -DCPU_LINE_STM32L552xx -DSTM32_FLASHSIZE=524288U -D__SYSTEM_STM32L5XX_H -DSYSTEM_STM32L5XX_H -mno-thumb-interwork -mcpu=cortex-m33 -mlittle-endian -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -ffunction-sections -fdata-sections -fshort-enums -ggdb -g3 -Os -DCPU_MODEL_STM32L552ZE -DCPU_CORE_CORTEX_M33 -DRIOT_APPLICATION=\\"wasm-example\\" -DBOARD_NUCLEO_L552ZE_Q=\\"nucleo-l552ze-q\\" -DRIOT_BOARD=BOARD_NUCLEO_L552ZE_Q -DCPU_STM32=\\"stm32\\" -DRIOT_CPU=CPU_STM32 -std=c11 -fwrapv -Wstrict-overflow -fno-common -ffunction-sections -fdata-sections -Wall -Wextra -Wmissing-include-dirs -fno-delete-null-pointer-checks -fdiagnostics-color -Wstrict-prototypes -Wold-style-definition -gz -Wformat=2 -Wformat-overflow -Wformat-truncation -fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/= -DCPU_RAM_BASE=0x20000000 -DCPU_RAM_SIZE=0x40000 -include '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h' -Wno-format -Wno-strict-prototypes -Wno-old-style-definition -Wno-cast-function-type    -v -o CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj -c /usr/local/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/arm-none-eabi-gcc
+        Target: arm-none-eabi
+        Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-option-checking --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:10.3-2021.07-4 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile,aprofile CFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' DFLAGS=-frelease FCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' FFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' GCJFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -flto=auto -Wl,-z,relro' OBJCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip SED=/bin/sed SHELL=/bin/sh BASH=/bin/bash CONFIG_SHELL=/bin/bash
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 10.3.1 20210621 (release) (15:10.3-2021.07-4) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-D' 'THREAD_STACKSIZE_MAIN=(6 * 1024)' '-D' 'ISR_STACKSIZE=1024' '-D' 'WAMR_BUILD_MEMORY_CHECK=0' '-D' 'DEVELHELP' '-D' 'CPU_FAM_STM32L5' '-D' 'STM32L552xx' '-D' 'CPU_LINE_STM32L552xx' '-D' 'STM32_FLASHSIZE=524288U' '-D' '__SYSTEM_STM32L5XX_H' '-D' 'SYSTEM_STM32L5XX_H' '-mno-thumb-interwork' '-mcpu=cortex-m33' '-mlittle-endian' '-mthumb' '-mfloat-abi=hard' '-mfpu=fpv5-sp-d16' '-fshort-enums' '-ggdb' '-g3' '-Os' '-D' 'CPU_MODEL_STM32L552ZE' '-D' 'CPU_CORE_CORTEX_M33' '-D' 'RIOT_APPLICATION="wasm-example"' '-D' 'BOARD_NUCLEO_L552ZE_Q="nucleo-l552ze-q"' '-D' 'RIOT_BOARD=BOARD_NUCLEO_L552ZE_Q' '-D' 'CPU_STM32="stm32"' '-D' 'RIOT_CPU=CPU_STM32' '-std=c11' '-fwrapv' '-Wstrict-overflow' '-fno-common' '-ffunction-sections' '-fdata-sections' '-Wall' '-Wextra' '-Wmissing-include-dirs' '-fno-delete-null-pointer-checks' '-gz' '-Wformat=2' '-Wformat-overflow=1' '-Wformat-truncation=1' '-fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/=' '-D' 'CPU_RAM_BASE=0x20000000' '-D' 'CPU_RAM_SIZE=0x40000' '-include' '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h' '-Wformat=0' '-Wno-strict-prototypes' '-Wno-old-style-definition' '-Wno-cast-function-type' '-v' '-o' 'CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp'
+         /usr/lib/gcc/arm-none-eabi/10.3.1/cc1 -quiet -v -imultilib thumb/v8-m.main+fp/hard -dD -D__USES_INITFINI__ -D THREAD_STACKSIZE_MAIN=(6 * 1024) -D ISR_STACKSIZE=1024 -D WAMR_BUILD_MEMORY_CHECK=0 -D DEVELHELP -D CPU_FAM_STM32L5 -D STM32L552xx -D CPU_LINE_STM32L552xx -D STM32_FLASHSIZE=524288U -D __SYSTEM_STM32L5XX_H -D SYSTEM_STM32L5XX_H -D CPU_MODEL_STM32L552ZE -D CPU_CORE_CORTEX_M33 -D RIOT_APPLICATION="wasm-example" -D BOARD_NUCLEO_L552ZE_Q="nucleo-l552ze-q" -D RIOT_BOARD=BOARD_NUCLEO_L552ZE_Q -D CPU_STM32="stm32" -D RIOT_CPU=CPU_STM32 -D CPU_RAM_BASE=0x20000000 -D CPU_RAM_SIZE=0x40000 -include /home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h /usr/local/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mno-thumb-interwork -mcpu=cortex-m33 -mlittle-endian -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -auxbase-strip CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj -ggdb -g3 -gz -Os -Wstrict-overflow -Wall -Wextra -Wmissing-include-dirs -Wformat=2 -Wformat-overflow=1 -Wformat-truncation=1 -Wformat=0 -Wno-strict-prototypes -Wno-old-style-definition -Wno-cast-function-type -std=c11 -version -fdiagnostics-color=always -fshort-enums -fwrapv -fno-common -ffunction-sections -fdata-sections -fno-delete-null-pointer-checks -fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/= -o /tmp/ccRVzUxU.s
+        GNU C11 (15:10.3-2021.07-4) version 10.3.1 20210621 (release) (arm-none-eabi)
+        	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/sys-include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/arm-none-eabi/10.3.1/include
+         /usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed
+         /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include
+        End of search list.
+        GNU C11 (15:10.3-2021.07-4) version 10.3.1 20210621 (release) (arm-none-eabi)
+        	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 4cf7574ae54eb0935abb4a8c56f8bcfe
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-D' 'THREAD_STACKSIZE_MAIN=(6 * 1024)' '-D' 'ISR_STACKSIZE=1024' '-D' 'WAMR_BUILD_MEMORY_CHECK=0' '-D' 'DEVELHELP' '-D' 'CPU_FAM_STM32L5' '-D' 'STM32L552xx' '-D' 'CPU_LINE_STM32L552xx' '-D' 'STM32_FLASHSIZE=524288U' '-D' '__SYSTEM_STM32L5XX_H' '-D' 'SYSTEM_STM32L5XX_H' '-mno-thumb-interwork' '-mcpu=cortex-m33' '-mlittle-endian' '-mthumb' '-mfloat-abi=hard' '-mfpu=fpv5-sp-d16' '-fshort-enums' '-ggdb' '-g3' '-Os' '-D' 'CPU_MODEL_STM32L552ZE' '-D' 'CPU_CORE_CORTEX_M33' '-D' 'RIOT_APPLICATION="wasm-example"' '-D' 'BOARD_NUCLEO_L552ZE_Q="nucleo-l552ze-q"' '-D' 'RIOT_BOARD=BOARD_NUCLEO_L552ZE_Q' '-D' 'CPU_STM32="stm32"' '-D' 'RIOT_CPU=CPU_STM32' '-std=c11' '-fwrapv' '-Wstrict-overflow' '-fno-common' '-ffunction-sections' '-fdata-sections' '-Wall' '-Wextra' '-Wmissing-include-dirs' '-fno-delete-null-pointer-checks' '-gz' '-Wformat=2' '-Wformat-overflow=1' '-Wformat-truncation=1' '-fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/=' '-D' 'CPU_RAM_BASE=0x20000000' '-D' 'CPU_RAM_SIZE=0x40000' '-include' '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h' '-Wformat=0' '-Wno-strict-prototypes' '-Wno-old-style-definition' '-Wno-cast-function-type' '-v' '-o' 'CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp'
+         /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/as -v --compress-debug-sections=zlib -EL -march=armv8-m.main+dsp -mfloat-abi=hard -mfpu=fpv5-sp-d16 -meabi=5 -o CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj /tmp/ccRVzUxU.s
+        GNU assembler version 2.38 (arm-none-eabi) using BFD version (2.38-3ubuntu1+15build1) 2.38
+        COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard/:/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/:/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-D' 'THREAD_STACKSIZE_MAIN=(6 * 1024)' '-D' 'ISR_STACKSIZE=1024' '-D' 'WAMR_BUILD_MEMORY_CHECK=0' '-D' 'DEVELHELP' '-D' 'CPU_FAM_STM32L5' '-D' 'STM32L552xx' '-D' 'CPU_LINE_STM32L552xx' '-D' 'STM32_FLASHSIZE=524288U' '-D' '__SYSTEM_STM32L5XX_H' '-D' 'SYSTEM_STM32L5XX_H' '-mno-thumb-interwork' '-mcpu=cortex-m33' '-mlittle-endian' '-mthumb' '-mfloat-abi=hard' '-mfpu=fpv5-sp-d16' '-fshort-enums' '-ggdb' '-g3' '-Os' '-D' 'CPU_MODEL_STM32L552ZE' '-D' 'CPU_CORE_CORTEX_M33' '-D' 'RIOT_APPLICATION="wasm-example"' '-D' 'BOARD_NUCLEO_L552ZE_Q="nucleo-l552ze-q"' '-D' 'RIOT_BOARD=BOARD_NUCLEO_L552ZE_Q' '-D' 'CPU_STM32="stm32"' '-D' 'RIOT_CPU=CPU_STM32' '-std=c11' '-fwrapv' '-Wstrict-overflow' '-fno-common' '-ffunction-sections' '-fdata-sections' '-Wall' '-Wextra' '-Wmissing-include-dirs' '-fno-delete-null-pointer-checks' '-gz' '-Wformat=2' '-Wformat-overflow=1' '-Wformat-truncation=1' '-fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/=' '-D' 'CPU_RAM_BASE=0x20000000' '-D' 'CPU_RAM_SIZE=0x40000' '-include' '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h' '-Wformat=0' '-Wno-strict-prototypes' '-Wno-old-style-definition' '-Wno-cast-function-type' '-v' '-o' 'CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp'
+        Linking C static library libcmTC_8ba01.a
+        /usr/local/bin/cmake -P CMakeFiles/cmTC_8ba01.dir/cmake_clean_target.cmake
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ba01.dir/link.txt --verbose=1
+        /usr/bin/arm-none-eabi-ar qc libcmTC_8ba01.a CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj
+        /usr/bin/arm-none-eabi-ranlib libcmTC_8ba01.a
+        gmake[3]: Leaving directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX'
+        gmake[2]: Leaving directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/arm-none-eabi/10.3.1/include]
+          add: [/usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+          add: [/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/10.3.1/include] ==> [/usr/lib/gcc/arm-none-eabi/10.3.1/include]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed] ==> [/usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include] ==> [/usr/lib/arm-none-eabi/include]
+        implicit include dirs: [/usr/lib/gcc/arm-none-eabi/10.3.1/include;/usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed;/usr/lib/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8ba01/fast]
+        ignore line: [gmake[2]: Entering directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX']
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_8ba01.dir/build.make CMakeFiles/cmTC_8ba01.dir/build]
+        ignore line: [gmake[3]: Entering directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX']
+        ignore line: [Building C object CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/usr/bin/arm-none-eabi-gcc   -DTHREAD_STACKSIZE_MAIN='(6 * 1024)' -DISR_STACKSIZE=1024 -DWAMR_BUILD_MEMORY_CHECK=0 -DDEVELHELP -DCPU_FAM_STM32L5 -DSTM32L552xx -DCPU_LINE_STM32L552xx -DSTM32_FLASHSIZE=524288U -D__SYSTEM_STM32L5XX_H -DSYSTEM_STM32L5XX_H -mno-thumb-interwork -mcpu=cortex-m33 -mlittle-endian -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -ffunction-sections -fdata-sections -fshort-enums -ggdb -g3 -Os -DCPU_MODEL_STM32L552ZE -DCPU_CORE_CORTEX_M33 -DRIOT_APPLICATION=\\"wasm-example\\" -DBOARD_NUCLEO_L552ZE_Q=\\"nucleo-l552ze-q\\" -DRIOT_BOARD=BOARD_NUCLEO_L552ZE_Q -DCPU_STM32=\\"stm32\\" -DRIOT_CPU=CPU_STM32 -std=c11 -fwrapv -Wstrict-overflow -fno-common -ffunction-sections -fdata-sections -Wall -Wextra -Wmissing-include-dirs -fno-delete-null-pointer-checks -fdiagnostics-color -Wstrict-prototypes -Wold-style-definition -gz -Wformat=2 -Wformat-overflow -Wformat-truncation -fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/= -DCPU_RAM_BASE=0x20000000 -DCPU_RAM_SIZE=0x40000 -include '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h' -Wno-format -Wno-strict-prototypes -Wno-old-style-definition -Wno-cast-function-type    -v -o CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj -c /usr/local/share/cmake-3.27/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-gcc]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-option-checking --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:10.3-2021.07-4 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile,aprofile CFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' DFLAGS=-frelease FCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' FFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' GCJFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -flto=auto -Wl,-z,relro' OBJCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip SED=/bin/sed SHELL=/bin/sh BASH=/bin/bash CONFIG_SHELL=/bin/bash]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.3.1 20210621 (release) (15:10.3-2021.07-4) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-D' 'THREAD_STACKSIZE_MAIN=(6 * 1024)' '-D' 'ISR_STACKSIZE=1024' '-D' 'WAMR_BUILD_MEMORY_CHECK=0' '-D' 'DEVELHELP' '-D' 'CPU_FAM_STM32L5' '-D' 'STM32L552xx' '-D' 'CPU_LINE_STM32L552xx' '-D' 'STM32_FLASHSIZE=524288U' '-D' '__SYSTEM_STM32L5XX_H' '-D' 'SYSTEM_STM32L5XX_H' '-mno-thumb-interwork' '-mcpu=cortex-m33' '-mlittle-endian' '-mthumb' '-mfloat-abi=hard' '-mfpu=fpv5-sp-d16' '-fshort-enums' '-ggdb' '-g3' '-Os' '-D' 'CPU_MODEL_STM32L552ZE' '-D' 'CPU_CORE_CORTEX_M33' '-D' 'RIOT_APPLICATION="wasm-example"' '-D' 'BOARD_NUCLEO_L552ZE_Q="nucleo-l552ze-q"' '-D' 'RIOT_BOARD=BOARD_NUCLEO_L552ZE_Q' '-D' 'CPU_STM32="stm32"' '-D' 'RIOT_CPU=CPU_STM32' '-std=c11' '-fwrapv' '-Wstrict-overflow' '-fno-common' '-ffunction-sections' '-fdata-sections' '-Wall' '-Wextra' '-Wmissing-include-dirs' '-fno-delete-null-pointer-checks' '-gz' '-Wformat=2' '-Wformat-overflow=1' '-Wformat-truncation=1' '-fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/=' '-D' 'CPU_RAM_BASE=0x20000000' '-D' 'CPU_RAM_SIZE=0x40000' '-include' '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h' '-Wformat=0' '-Wno-strict-prototypes' '-Wno-old-style-definition' '-Wno-cast-function-type' '-v' '-o' 'CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp']
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/cc1 -quiet -v -imultilib thumb/v8-m.main+fp/hard -dD -D__USES_INITFINI__ -D THREAD_STACKSIZE_MAIN=(6 * 1024) -D ISR_STACKSIZE=1024 -D WAMR_BUILD_MEMORY_CHECK=0 -D DEVELHELP -D CPU_FAM_STM32L5 -D STM32L552xx -D CPU_LINE_STM32L552xx -D STM32_FLASHSIZE=524288U -D __SYSTEM_STM32L5XX_H -D SYSTEM_STM32L5XX_H -D CPU_MODEL_STM32L552ZE -D CPU_CORE_CORTEX_M33 -D RIOT_APPLICATION="wasm-example" -D BOARD_NUCLEO_L552ZE_Q="nucleo-l552ze-q" -D RIOT_BOARD=BOARD_NUCLEO_L552ZE_Q -D CPU_STM32="stm32" -D RIOT_CPU=CPU_STM32 -D CPU_RAM_BASE=0x20000000 -D CPU_RAM_SIZE=0x40000 -include /home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h /usr/local/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mno-thumb-interwork -mcpu=cortex-m33 -mlittle-endian -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -auxbase-strip CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj -ggdb -g3 -gz -Os -Wstrict-overflow -Wall -Wextra -Wmissing-include-dirs -Wformat=2 -Wformat-overflow=1 -Wformat-truncation=1 -Wformat=0 -Wno-strict-prototypes -Wno-old-style-definition -Wno-cast-function-type -std=c11 -version -fdiagnostics-color=always -fshort-enums -fwrapv -fno-common -ffunction-sections -fdata-sections -fno-delete-null-pointer-checks -fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/= -o /tmp/ccRVzUxU.s]
+        ignore line: [GNU C11 (15:10.3-2021.07-4) version 10.3.1 20210621 (release) (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/sys-include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/include]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C11 (15:10.3-2021.07-4) version 10.3.1 20210621 (release) (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 4cf7574ae54eb0935abb4a8c56f8bcfe]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-D' 'THREAD_STACKSIZE_MAIN=(6 * 1024)' '-D' 'ISR_STACKSIZE=1024' '-D' 'WAMR_BUILD_MEMORY_CHECK=0' '-D' 'DEVELHELP' '-D' 'CPU_FAM_STM32L5' '-D' 'STM32L552xx' '-D' 'CPU_LINE_STM32L552xx' '-D' 'STM32_FLASHSIZE=524288U' '-D' '__SYSTEM_STM32L5XX_H' '-D' 'SYSTEM_STM32L5XX_H' '-mno-thumb-interwork' '-mcpu=cortex-m33' '-mlittle-endian' '-mthumb' '-mfloat-abi=hard' '-mfpu=fpv5-sp-d16' '-fshort-enums' '-ggdb' '-g3' '-Os' '-D' 'CPU_MODEL_STM32L552ZE' '-D' 'CPU_CORE_CORTEX_M33' '-D' 'RIOT_APPLICATION="wasm-example"' '-D' 'BOARD_NUCLEO_L552ZE_Q="nucleo-l552ze-q"' '-D' 'RIOT_BOARD=BOARD_NUCLEO_L552ZE_Q' '-D' 'CPU_STM32="stm32"' '-D' 'RIOT_CPU=CPU_STM32' '-std=c11' '-fwrapv' '-Wstrict-overflow' '-fno-common' '-ffunction-sections' '-fdata-sections' '-Wall' '-Wextra' '-Wmissing-include-dirs' '-fno-delete-null-pointer-checks' '-gz' '-Wformat=2' '-Wformat-overflow=1' '-Wformat-truncation=1' '-fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/=' '-D' 'CPU_RAM_BASE=0x20000000' '-D' 'CPU_RAM_SIZE=0x40000' '-include' '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h' '-Wformat=0' '-Wno-strict-prototypes' '-Wno-old-style-definition' '-Wno-cast-function-type' '-v' '-o' 'CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp']
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/as -v --compress-debug-sections=zlib -EL -march=armv8-m.main+dsp -mfloat-abi=hard -mfpu=fpv5-sp-d16 -meabi=5 -o CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj /tmp/ccRVzUxU.s]
+        ignore line: [GNU assembler version 2.38 (arm-none-eabi) using BFD version (2.38-3ubuntu1+15build1) 2.38]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard/:/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/:/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-D' 'THREAD_STACKSIZE_MAIN=(6 * 1024)' '-D' 'ISR_STACKSIZE=1024' '-D' 'WAMR_BUILD_MEMORY_CHECK=0' '-D' 'DEVELHELP' '-D' 'CPU_FAM_STM32L5' '-D' 'STM32L552xx' '-D' 'CPU_LINE_STM32L552xx' '-D' 'STM32_FLASHSIZE=524288U' '-D' '__SYSTEM_STM32L5XX_H' '-D' 'SYSTEM_STM32L5XX_H' '-mno-thumb-interwork' '-mcpu=cortex-m33' '-mlittle-endian' '-mthumb' '-mfloat-abi=hard' '-mfpu=fpv5-sp-d16' '-fshort-enums' '-ggdb' '-g3' '-Os' '-D' 'CPU_MODEL_STM32L552ZE' '-D' 'CPU_CORE_CORTEX_M33' '-D' 'RIOT_APPLICATION="wasm-example"' '-D' 'BOARD_NUCLEO_L552ZE_Q="nucleo-l552ze-q"' '-D' 'RIOT_BOARD=BOARD_NUCLEO_L552ZE_Q' '-D' 'CPU_STM32="stm32"' '-D' 'RIOT_CPU=CPU_STM32' '-std=c11' '-fwrapv' '-Wstrict-overflow' '-fno-common' '-ffunction-sections' '-fdata-sections' '-Wall' '-Wextra' '-Wmissing-include-dirs' '-fno-delete-null-pointer-checks' '-gz' '-Wformat=2' '-Wformat-overflow=1' '-Wformat-truncation=1' '-fmacro-prefix-map=/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/=' '-D' 'CPU_RAM_BASE=0x20000000' '-D' 'CPU_RAM_SIZE=0x40000' '-include' '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/riotbuild/riotbuild.h' '-Wformat=0' '-Wno-strict-prototypes' '-Wno-old-style-definition' '-Wno-cast-function-type' '-v' '-o' 'CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp']
+        ignore line: [Linking C static library libcmTC_8ba01.a]
+        ignore line: [/usr/local/bin/cmake -P CMakeFiles/cmTC_8ba01.dir/cmake_clean_target.cmake]
+        ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ba01.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/arm-none-eabi-ar qc libcmTC_8ba01.a CMakeFiles/cmTC_8ba01.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/usr/bin/arm-none-eabi-ranlib libcmTC_8ba01.a]
+        ignore line: [gmake[3]: Leaving directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX']
+        ignore line: [gmake[2]: Leaving directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-jmU3HX']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK"
+      binary: "/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK'
+        
+        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7d21f/fast
+        gmake[2]: Entering directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7d21f.dir/build.make CMakeFiles/cmTC_7d21f.dir/build
+        gmake[3]: Entering directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK'
+        Building CXX object CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj
+        /usr/bin/arm-none-eabi-g++   -v -o CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/local/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/arm-none-eabi-g++
+        Target: arm-none-eabi
+        Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-option-checking --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:10.3-2021.07-4 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile,aprofile CFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' DFLAGS=-frelease FCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' FFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' GCJFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -flto=auto -Wl,-z,relro' OBJCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip SED=/bin/sed SHELL=/bin/sh BASH=/bin/bash CONFIG_SHELL=/bin/bash
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 10.3.1 20210621 (release) (15:10.3-2021.07-4) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t'
+         /usr/lib/gcc/arm-none-eabi/10.3.1/cc1plus -quiet -v -D__USES_INITFINI__ /usr/local/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -auxbase-strip CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj -version -o /tmp/ccyFzB7C.s
+        GNU C++14 (15:10.3-2021.07-4) version 10.3.1 20210621 (release) (arm-none-eabi)
+        	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/sys-include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1
+         /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi
+         /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1/backward
+         /usr/lib/gcc/arm-none-eabi/10.3.1/include
+         /usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed
+         /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include
+        End of search list.
+        GNU C++14 (15:10.3-2021.07-4) version 10.3.1 20210621 (release) (arm-none-eabi)
+        	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 4f994585a8ca8864fa1f4d2fb208a0ba
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t'
+         /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccyFzB7C.s
+        GNU assembler version 2.38 (arm-none-eabi) using BFD version (2.38-3ubuntu1+15build1) 2.38
+        COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t'
+        Linking CXX static library libcmTC_7d21f.a
+        /usr/local/bin/cmake -P CMakeFiles/cmTC_7d21f.dir/cmake_clean_target.cmake
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d21f.dir/link.txt --verbose=1
+        /usr/bin/arm-none-eabi-ar qc libcmTC_7d21f.a CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj
+        /usr/bin/arm-none-eabi-ranlib libcmTC_7d21f.a
+        gmake[3]: Leaving directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK'
+        gmake[2]: Leaving directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1]
+          add: [/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi]
+          add: [/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1/backward]
+          add: [/usr/lib/gcc/arm-none-eabi/10.3.1/include]
+          add: [/usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+          add: [/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1] ==> [/usr/lib/arm-none-eabi/include/c++/10.3.1]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi] ==> [/usr/lib/arm-none-eabi/include/c++/10.3.1/arm-none-eabi]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1/backward] ==> [/usr/lib/arm-none-eabi/include/c++/10.3.1/backward]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/10.3.1/include] ==> [/usr/lib/gcc/arm-none-eabi/10.3.1/include]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed] ==> [/usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include] ==> [/usr/lib/arm-none-eabi/include]
+        implicit include dirs: [/usr/lib/arm-none-eabi/include/c++/10.3.1;/usr/lib/arm-none-eabi/include/c++/10.3.1/arm-none-eabi;/usr/lib/arm-none-eabi/include/c++/10.3.1/backward;/usr/lib/gcc/arm-none-eabi/10.3.1/include;/usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed;/usr/lib/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7d21f/fast]
+        ignore line: [gmake[2]: Entering directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK']
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_7d21f.dir/build.make CMakeFiles/cmTC_7d21f.dir/build]
+        ignore line: [gmake[3]: Entering directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK']
+        ignore line: [Building CXX object CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/usr/bin/arm-none-eabi-g++   -v -o CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/local/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-g++]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-option-checking --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:10.3-2021.07-4 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile,aprofile CFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' DFLAGS=-frelease FCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' FFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' GCJFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -flto=auto -Wl,-z,relro' OBJCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-arm-none-eabi-hYfgK4/gcc-arm-none-eabi-10.3-2021.07=. -flto=auto -ffat-lto-objects -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip SED=/bin/sed SHELL=/bin/sh BASH=/bin/bash CONFIG_SHELL=/bin/bash]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.3.1 20210621 (release) (15:10.3-2021.07-4) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t']
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/cc1plus -quiet -v -D__USES_INITFINI__ /usr/local/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -auxbase-strip CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj -version -o /tmp/ccyFzB7C.s]
+        ignore line: [GNU C++14 (15:10.3-2021.07-4) version 10.3.1 20210621 (release) (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/sys-include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include/c++/10.3.1/backward]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/include]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++14 (15:10.3-2021.07-4) version 10.3.1 20210621 (release) (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 4f994585a8ca8864fa1f4d2fb208a0ba]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t']
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccyFzB7C.s]
+        ignore line: [GNU assembler version 2.38 (arm-none-eabi) using BFD version (2.38-3ubuntu1+15build1) 2.38]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/10.3.1/:/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t']
+        ignore line: [Linking CXX static library libcmTC_7d21f.a]
+        ignore line: [/usr/local/bin/cmake -P CMakeFiles/cmTC_7d21f.dir/cmake_clean_target.cmake]
+        ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d21f.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/arm-none-eabi-ar qc libcmTC_7d21f.a CMakeFiles/cmTC_7d21f.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/usr/bin/arm-none-eabi-ranlib libcmTC_7d21f.a]
+        ignore line: [gmake[3]: Leaving directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK']
+        ignore line: [gmake[2]: Leaving directory '/home/gowonisgood/wasm_runtime_protection_2025_re/wasm_runtime_protection_2025/RIOT/examples/beebs_wasm/bin/nucleo-l552ze-q/pkg-build/wamr/CMakeFiles/CMakeScratch/TryCompile-KIIHoK']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1104 (message)"
+      - "/usr/local/share/cmake-3.27/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:10 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (15:10.3-2021.07-4) 10.3.1 20210621 (release)
+      Copyright (C) 2020 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+...

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "cwe121_stack_based_buffer_overflow__char_type_overrun_memcpy_01_good.wasm.h": "c",
+        "cwe122_heap_based_buffer_overflow__char_type_overrun_memmove_17_good.wasm.h": "c"
+    }
+}
