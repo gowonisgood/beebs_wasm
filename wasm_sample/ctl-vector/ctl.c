@@ -49,42 +49,45 @@ static void *heap_end;
 
 /* Initialize the BEEBS heap pointers */
 
-static void
-init_heap ()
-{
-    heap_ptr = (void *) heap;
-    heap_end = heap_ptr + HEAP_SIZE;
-}
+/* GO: disable heap */
+// static void
+// init_heap ()
+// {
+//     heap_ptr = (void *) heap;
+//     heap_end = heap_ptr + HEAP_SIZE;
+// }
 
-/* BEEBS version of malloc.
+// /* BEEBS version of malloc.
 
-   This is primarily to reduce library and OS dependencies. Malloc is
-   generally not used in embedded code, or if it is, only in well defined
-   contexts to pre-allocate a fixed amount of memory. So this simplistic
-   implementation is just fine. */
+//    This is primarily to reduce library and OS dependencies. Malloc is
+//    generally not used in embedded code, or if it is, only in well defined
+//    contexts to pre-allocate a fixed amount of memory. So this simplistic
+//    implementation is just fine. */
 
-static void *
-malloc_beebs (size_t size)
-{
-    void *new_ptr = heap_ptr;
+// static void *
+// malloc_beebs (size_t size)
+// {
+//     void *new_ptr = heap_ptr;
 
-    if (((heap_ptr + size) > heap_end) || (0 == size))
-	return NULL;
-    else
-	{
-	    heap_ptr += size;
-	    return new_ptr;
-	}
-}
+//     if (((heap_ptr + size) > heap_end) || (0 == size))
+// 	return NULL;
+//     else
+// 	{
+// 	    heap_ptr += size;
+// 	    return new_ptr;
+// 	}
+// }
 
-/* BEEBS version of free.
+// /* BEEBS version of free.
 
-   For our simplified version of memory handling, free can just do nothing. */
+//    For our simplified version of memory handling, free can just do nothing. */
 
-static void
-free_beebs (void *ptr)
-{
-}
+// static void
+// free_beebs (void *ptr)
+// {
+// }
+
+/* GO: disable heap */
 
 #ifdef CTL_VECTOR
 #include "vector.h"
@@ -144,7 +147,7 @@ void initialise_benchmark() {
   begin = 4;
   end = 50;
   end2 = 8;
-  init_heap ();
+  //init_heap ();
 }
 
 int verify_benchmark(int r)

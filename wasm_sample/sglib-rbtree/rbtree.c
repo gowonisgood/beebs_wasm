@@ -66,47 +66,47 @@ static void *heap_end;
 
 /* Initialize the BEEBS heap pointers */
 
-static void
-init_heap (void)
-{
-    heap_ptr = (void *) heap;
-    heap_end = heap_ptr + HEAP_SIZE;
-}
+// static void
+// init_heap (void)
+// {
+//     heap_ptr = (void *) heap;
+//     heap_end = heap_ptr + HEAP_SIZE;
+// }
 
-/* BEEBS version of malloc.
+// /* BEEBS version of malloc.
 
-   This is primarily to reduce library and OS dependencies. Malloc is
-   generally not used in embedded code, or if it is, only in well defined
-   contexts to pre-allocate a fixed amount of memory. So this simplistic
-   implementation is just fine. */
+//    This is primarily to reduce library and OS dependencies. Malloc is
+//    generally not used in embedded code, or if it is, only in well defined
+//    contexts to pre-allocate a fixed amount of memory. So this simplistic
+//    implementation is just fine. */
 
-static void *
-malloc_beebs (size_t size)
-{
-    void *new_ptr = heap_ptr;
+// static void *
+// malloc_beebs (size_t size)
+// {
+//     void *new_ptr = heap_ptr;
 
-    if (((heap_ptr + size) > heap_end) || (0 == size))
-	return NULL;
-    else
-	{
-	    heap_ptr += size;
-	    return new_ptr;
-	}
-}
+//     if (((heap_ptr + size) > heap_end) || (0 == size))
+// 	return NULL;
+//     else
+// 	{
+// 	    heap_ptr += size;
+// 	    return new_ptr;
+// 	}
+// }
 
-/* BEEBS version of free.
+// /* BEEBS version of free.
 
-   For our simplified version of memory handling, free can just do nothing. */
+//    For our simplified version of memory handling, free can just do nothing. */
 
-static void
-free_beebs (void *ptr)
-{
-}
+// static void
+// free_beebs (void *ptr)
+// {
+// }
 
 void
 initialise_benchmark (void)
 {
-  init_heap ();
+  //init_heap ();
 }
 
 
@@ -131,7 +131,7 @@ WASM_EXPORT int main()
   for (i=0; i<100; i++) {
     e.n = array[i];
     if (sglib_rbtree_find_member(the_tree, &e)==NULL) {
-      t = malloc_beebs(sizeof(struct rbtree));
+      t = malloc(sizeof(struct rbtree));
       t->n = array[i];
       sglib_rbtree_add(&the_tree, t);
     }
@@ -142,7 +142,7 @@ WASM_EXPORT int main()
   }
 
   for(te=sglib_rbtree_it_init(&it,the_tree); te!=NULL; te=sglib_rbtree_it_next(&it)) {
-    free_beebs(te);
+    free(te);
   }
 
   verify_benchmark(cnt);

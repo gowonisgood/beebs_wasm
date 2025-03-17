@@ -61,49 +61,49 @@ int array[100] = {14, 66, 12, 41, 86, 69, 19, 77, 68, 38, 26, 42, 37, 23, 17, 29
 
 #include <stddef.h>
 
-#define HEAP_SIZE 8192
-static char heap[HEAP_SIZE];
-static void *heap_ptr;
-static void *heap_end;
+// #define HEAP_SIZE 8192
+// static char heap[HEAP_SIZE];
+// static void *heap_ptr;
+// static void *heap_end;
 
-/* Initialize the BEEBS heap pointers */
+// /* Initialize the BEEBS heap pointers */
 
-static void
-init_heap (void)
-{
-    heap_ptr = (void *) heap;
-    heap_end = heap_ptr + HEAP_SIZE;
-}
+// static void
+// init_heap (void)
+// {
+//     heap_ptr = (void *) heap;
+//     heap_end = heap_ptr + HEAP_SIZE;
+// }
 
-/* BEEBS version of malloc.
+// /* BEEBS version of malloc.
 
-   This is primarily to reduce library and OS dependencies. Malloc is
-   generally not used in embedded code, or if it is, only in well defined
-   contexts to pre-allocate a fixed amount of memory. So this simplistic
-   implementation is just fine. */
+//    This is primarily to reduce library and OS dependencies. Malloc is
+//    generally not used in embedded code, or if it is, only in well defined
+//    contexts to pre-allocate a fixed amount of memory. So this simplistic
+//    implementation is just fine. */
 
-static void *
-malloc_beebs (size_t size)
-{
-    void *new_ptr = heap_ptr;
+// static void *
+// malloc_beebs (size_t size)
+// {
+//     void *new_ptr = heap_ptr;
 
-    if (((heap_ptr + size) > heap_end) || (0 == size))
-	return NULL;
-    else
-	{
-	    heap_ptr += size;
-	    return new_ptr;
-	}
-}
+//     if (((heap_ptr + size) > heap_end) || (0 == size))
+// 	return NULL;
+//     else
+// 	{
+// 	    heap_ptr += size;
+// 	    return new_ptr;
+// 	}
+// }
 
-/* BEEBS version of free.
+// /* BEEBS version of free.
 
-   For our simplified version of memory handling, free can just do nothing. */
+//    For our simplified version of memory handling, free can just do nothing. */
 
-static void
-free_beebs (void *ptr)
-{
-}
+// static void
+// free_beebs (void *ptr)
+// {
+// }
 
 /* This benchmark does not support verification */
 
@@ -117,7 +117,7 @@ verify_benchmark (int res __attribute ((unused)) )
 void
 initialise_benchmark (void)
 {
-  init_heap ();
+  //init_heap ();
 }
 
 
@@ -135,7 +135,7 @@ WASM_EXPORT int main()
   the_list = NULL;
   for(i = 0 ;i<100; ++i)
   {
-    l = malloc_beebs(sizeof(dllist));
+    l = malloc(sizeof(dllist));
     l->i = array[i];
     sglib_dllist_add(&the_list, l);
   }
@@ -158,7 +158,7 @@ WASM_EXPORT int main()
   for(l=sglib_dllist_it_init(&it,the_list); l!=NULL; l=sglib_dllist_it_next(&it))
   {
     cnt += l->i;
-    free_beebs(l);
+    free(l);
   }
 
   verify_benchmark(cnt);

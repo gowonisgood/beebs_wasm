@@ -212,7 +212,7 @@
 // Note if MINIZ_NO_MALLOC is defined then the user must always provide custom user alloc/free/realloc
 // callbacks to the zlib and archive API's, and a few stand-alone helper API's which don't provide custom user
 // functions (such as tdefl_compress_mem_to_heap() and tinfl_decompress_mem_to_heap()) won't work.
-#define MINIZ_NO_MALLOC
+//#define MINIZ_NO_MALLOC /* GO: disalble MNIZ_NO_MALLOC */
 
 #define MINIZ_NO_STDIO
 #define MINIZ_NO_TIME

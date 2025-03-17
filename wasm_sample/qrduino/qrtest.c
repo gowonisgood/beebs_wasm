@@ -39,13 +39,13 @@ static const char *encode;
 static int size;
 
 
-extern void init_heap (void);
+//extern void init_heap (void);
 
 void initialise_benchmark() {
   static const char *in_encode = "http://www.mageec.com";
   encode = in_encode;
   size = 22;
-  init_heap ();
+  //init_heap ();
 }
 
 //#include <stdio.h>

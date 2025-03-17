@@ -57,19 +57,21 @@ SGLIB_DEFINE_SORTED_LIST_FUNCTIONS(iListType, ILIST_COMPARATOR, next_ptr)
 
 #include <stddef.h>
 
-#define HEAP_SIZE 8192
-static char heap[HEAP_SIZE];
-static void *heap_ptr;
-static void *heap_end;
+/* GO: disable heap */
+
+// #define HEAP_SIZE 8192
+// static char heap[HEAP_SIZE];
+// static void *heap_ptr;
+// static void *heap_end;
 
 /* Initialize the BEEBS heap pointers */
 
-static void
-init_heap (void)
-{
-    heap_ptr = (void *) heap;
-    heap_end = heap_ptr + HEAP_SIZE;
-}
+// static void
+// init_heap (void)
+// {
+//     heap_ptr = (void *) heap;
+//     heap_end = heap_ptr + HEAP_SIZE;
+// }
 
 /* BEEBS version of malloc.
 
@@ -78,33 +80,35 @@ init_heap (void)
    contexts to pre-allocate a fixed amount of memory. So this simplistic
    implementation is just fine. */
 
-static void *
-malloc_beebs (size_t size)
-{
-    void *new_ptr = heap_ptr;
+// static void *
+// malloc_beebs (size_t size)
+// {
+//     void *new_ptr = heap_ptr;
 
-    if (((heap_ptr + size) > heap_end) || (0 == size))
-	return NULL;
-    else
-	{
-	    heap_ptr += size;
-	    return new_ptr;
-	}
-}
+//     if (((heap_ptr + size) > heap_end) || (0 == size))
+// 	return NULL;
+//     else
+// 	{
+// 	    heap_ptr += size;
+// 	    return new_ptr;
+// 	}
+// }
 
 /* BEEBS version of free.
 
    For our simplified version of memory handling, free can just do nothing. */
 
-static void
-free_beebs (void *ptr)
-{
-}
+// static void
+// free_beebs (void *ptr)
+// {
+// }
+
+/* GO: disable heap */
 
 void
 initialise_benchmark (void)
 {
-  init_heap ();
+  //init_heap ();
 }
 
 
@@ -127,7 +131,8 @@ WASM_EXPORT int main()
 
   the_list = NULL;
   for (i = 1; i < 100; i++) {
-    l = malloc_beebs (sizeof (struct ilist));
+    //l = malloc_beebs (sizeof (struct ilist));
+    l = (struct ilist *)malloc(sizeof(struct ilist));
     l->i = array [i];
 
     /* Insert the new element into the list while keeping it sorted.  */
@@ -139,7 +144,8 @@ WASM_EXPORT int main()
   }
 
   for(l = sglib_iListType_it_init (&it, the_list); l != NULL; l = sglib_iListType_it_next (&it)) {
-    free_beebs (l);
+    //free_beebs (l);
+    free(l);
   }
 
   verify_benchmark(cnt);

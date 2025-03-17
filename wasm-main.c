@@ -312,12 +312,12 @@
     iwasm_runtime_destroy();
 
     // Test for huffbench
-    /*printf("iwasm_initilised_huffbench: %s\n", telltruth(iwasm_runtime_init()));
+    printf("iwasm_initilised_huffbench: %s\n", telltruth(iwasm_runtime_init()));
     int app_argc_huffbench = 0;
     const char *app_argv_huffbench[] = {""};
     ret = wamr_run_cp(huffbench_wasm, huffbench_wasm_len, app_argc_huffbench, app_argv_huffbench);
     printf("ret = %d\n", ret);
-    iwasm_runtime_destroy();*/
+    iwasm_runtime_destroy();
 
     // Test for insertsort
     printf("iwasm_initilised_insertsort: %s\n", telltruth(iwasm_runtime_init()));

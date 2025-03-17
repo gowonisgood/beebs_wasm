@@ -34,19 +34,19 @@
 
 #include <stddef.h>
 
-#define HEAP_SIZE 8192
-static char heap[HEAP_SIZE];
-static void *heap_ptr;
-static void *heap_end;
+// #define HEAP_SIZE 8192
+// static char heap[HEAP_SIZE];
+// static void *heap_ptr;
+// static void *heap_end;
 
-/* Initialize the BEEBS heap pointers */
+// /* Initialize the BEEBS heap pointers */
 
-void
-init_heap (void)
-{
-    heap_ptr = (void *) heap;
-    heap_end = heap_ptr + HEAP_SIZE;
-}
+// void
+// init_heap (void)
+// {
+//     heap_ptr = (void *) heap;
+//     heap_end = heap_ptr + HEAP_SIZE;
+// }
 
 /* BEEBS version of malloc.
 
@@ -55,46 +55,46 @@ init_heap (void)
    contexts to pre-allocate a fixed amount of memory. So this simplistic
    implementation is just fine. */
 
-static void *
-malloc_beebs (size_t size)
-{
-    void *new_ptr = heap_ptr;
+// static void *
+// malloc_beebs (size_t size)
+// {
+//     void *new_ptr = heap_ptr;
 
-    if (((heap_ptr + size) > heap_end) || (0 == size))
-	return NULL;
-    else
-	{
-	    heap_ptr += size;
-	    return new_ptr;
-	}
-}
+//     if (((heap_ptr + size) > heap_end) || (0 == size))
+// 	return NULL;
+//     else
+// 	{
+// 	    heap_ptr += size;
+// 	    return new_ptr;
+// 	}
+// }
 
 /* BEEBS version of calloc.
 
    Implement as wrapper for malloc */
 
-static void *
-calloc_beebs (size_t nmemb, size_t size)
-{
-  void *new_ptr = malloc_beebs (nmemb * size);
+// static void *
+// calloc_beebs (size_t nmemb, size_t size)
+// {
+//   void *new_ptr = malloc_beebs (nmemb * size);
 
-  /* Calloc is defined to zero the memory. OK to use a function here, because
-     it will be handled specially by the compiler anyway. */
+//   /* Calloc is defined to zero the memory. OK to use a function here, because
+//      it will be handled specially by the compiler anyway. */
 
-  if (NULL != new_ptr)
-    memset (new_ptr, 0, nmemb * size);
+//   if (NULL != new_ptr)
+//     memset (new_ptr, 0, nmemb * size);
 
-  return new_ptr;
-}
+//   return new_ptr;
+// }
 
-/* BEEBS version of free.
+// /* BEEBS version of free.
 
-   For our simplified version of memory handling, free can just do nothing. */
+//    For our simplified version of memory handling, free can just do nothing. */
 
-static void
-free_beebs (void *ptr)
-{
-}
+// static void
+// free_beebs (void *ptr)
+// {
+// }
 
 #ifndef __AVR__
 #define PROGMEM
@@ -244,9 +244,9 @@ void initframe()
 {
     unsigned x, y;
 
-    framebase = calloc_beebs(WDB * WD, 1);
-    framask = calloc_beebs(((WD * (WD + 1) / 2) + 7) / 8, 1);
-    rlens = malloc_beebs(WD + 1);
+    framebase = calloc(WDB * WD, 1);
+    framask = calloc(((WD * (WD + 1) / 2) + 7) / 8, 1);
+    rlens = malloc(WD + 1);
     // finders
     putfind();
     // alignment blocks
@@ -292,9 +292,9 @@ void initframe()
 }
 
 void freeframe() {
-    free_beebs( framebase );
-    free_beebs( framask );
-    free_beebs( rlens );
+    free( framebase );
+    free( framask );
+    free( rlens );
 }
 
 unsigned char *strinbuf;
@@ -322,7 +322,7 @@ unsigned initecc(unsigned char ecc, unsigned char vers)
     unsigned fsz = WD * WDB;
     if (fsz < 768)              // for ECC math buffers
         fsz = 768;
-    qrframe = malloc_beebs(fsz);
+    qrframe = malloc(fsz);
 
     ECCLEVEL = ecc;
     unsigned eccindex = (ecc - 1) * 4 + (vers - 1) * 16;
@@ -334,7 +334,7 @@ unsigned initecc(unsigned char ecc, unsigned char vers)
 
     if (fsz < datablkw + (datablkw + eccblkwid) * (neccblk1 + neccblk2) + neccblk2)
         fsz = datablkw + (datablkw + eccblkwid) * (neccblk1 + neccblk2) + neccblk2;
-    strinbuf = malloc_beebs(fsz);
+    strinbuf = malloc(fsz);
     return datablkw * (neccblk1 + neccblk2) + neccblk2 - 3;     //-2 if vers <= 9!
 }
 
@@ -355,6 +355,6 @@ unsigned initeccsize(unsigned char ecc, unsigned size)
 
 void freeecc()
 {
-    free_beebs(qrframe);
-    free_beebs(strinbuf);
+    free(qrframe);
+    free(strinbuf);
 }
