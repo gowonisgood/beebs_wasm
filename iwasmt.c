@@ -13,6 +13,7 @@
 #include <sys/time.h>
 
 #include "wasm_export.h"
+#include "ztimer.h"
 
 
 
@@ -99,7 +100,11 @@ void iwasm_runtime_destroy(void)
 /* this seems to be a very direct interpretation of "i like to have a wamr_run" */
 int wamr_run(void *bytecode, size_t bytecode_len, int argc, char **argv)
 {
-    return iwasm_bytecode_exec_main((uint8_t *)bytecode, bytecode_len, argc, argv);
+    uint32_t start = ztimer_now(ZTIMER_USEC);
+    int ret = iwasm_bytecode_exec_main((uint8_t *)bytecode, bytecode_len, argc, argv);
+    uint32_t end = ztimer_now(ZTIMER_USEC);
+    printf("Execution time: %lu microseconds\n", (unsigned long)(end - start));
+    return ret;
 }
 
 /* this creates a copy of bytecode and argv
